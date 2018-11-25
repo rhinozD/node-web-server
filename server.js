@@ -48,6 +48,14 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/profile', (req, res) => {
+    res.render('profile.hbs', {
+        pageTitle: 'My Profile',
+        name: "Hades10",
+        describe: "a newbie of Node"
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 400
